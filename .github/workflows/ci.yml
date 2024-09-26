@@ -1,0 +1,69 @@
+name: 'MR Pipeline'
+
+on:
+  pull_request:
+
+jobs:
+  linting:
+    name: 'Lint'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.0
+      - name: Setup Node
+        uses: actions/setup-node@v4.0.4
+        with:
+          node-version: '22.9.0'
+          cache: 'yarn'
+          cache-dependency-apth: 'yarn.lock'
+      - name: Install dependencies
+        run: yarn install --with dev
+      - name: Linting
+        run: yarn lint
+      - name: Formatting
+        run: yarn format
+  build:
+    name: 'Build'
+    runs-on: ubuntu-latest
+    needs:
+      - linting
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.0
+      - name: Setup Node
+        uses: actions/setup-node@v4.0.4
+        with:
+          node-version: '22.9.0'
+          cache: 'yarn'
+          cache-dependency-apth: 'yarn.lock'
+      - name: Install dependencies
+        run: yarn install --with dev
+      - name: Build
+        run: yarn build
+  tests:
+    name: 'Tests'
+    runs-on: ubuntu-latest
+    needs:
+      - build
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.0
+      - name: Setup Node
+        uses: actions/setup-node@v4.0.4
+        with:
+          node-version: '22.9.0'
+          cache: 'yarn'
+          cache-dependency-apth: 'yarn.lock'
+      - name: Install dependencies
+        run: yarn install --with dev
+      - name: Run unit tests
+        run: yarn test
