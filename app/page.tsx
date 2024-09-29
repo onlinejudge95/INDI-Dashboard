@@ -1,14 +1,15 @@
-import { Container, Main, Section } from '@/components/craft';
+'use client';
 
-export default function Home() {
+import { Hero } from '@/components/LandingPage/hero';
+import { NavigationMenu } from '@/components/navigationMenu';
+
+const Home = () => {
   return (
-    <Main>
-      <Section>
-        <Container>
-          <h1>Heading</h1>
-          <p>Content</p>
-        </Container>
-      </Section>
-    </Main>
+    <>
+      <NavigationMenu />
+      <Hero />
+    </>
   );
-}
+};
+
+export default Home;
