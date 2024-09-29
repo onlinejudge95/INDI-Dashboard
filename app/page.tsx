@@ -1,14 +1,7 @@
-import { Container, Main, Section } from '@/components/craft';
+import { NavigationMenu } from '@/components/NavigationMenu';
 
-export default function Home() {
-  return (
-    <Main>
-      <Section>
-        <Container>
-          <h1>Heading</h1>
-          <p>Content</p>
-        </Container>
-      </Section>
-    </Main>
-  );
-}
+const Home = () => {
+  return <NavigationMenu />;
+};
+
+export default Home;
