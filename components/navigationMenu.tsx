@@ -27,28 +27,21 @@ const NavigationMenu = () => {
           <div className='grid gap-4 py-6'>
             <ThemeToggle />
             <Link
-              href='#'
-              className='flex w-full items-center py-2 text-lg font-semibold'
-              prefetch={false}
-            >
-              Home
-            </Link>
-            <Link
-              href='#'
+              href='#about'
               className='flex w-full items-center py-2 text-lg font-semibold'
               prefetch={false}
             >
               About
             </Link>
             <Link
-              href='#'
+              href='#features'
               className='flex w-full items-center py-2 text-lg font-semibold'
               prefetch={false}
             >
-              Pricing
+              Features
             </Link>
             <Link
-              href='#'
+              href='#contact'
               className='flex w-full items-center py-2 text-lg font-semibold'
               prefetch={false}
             >
@@ -64,28 +57,21 @@ const NavigationMenu = () => {
         <nav className='flex items-center gap-6'>
           <ThemeToggle />
           <Link
-            href='#'
-            className='text-sm font-medium hover:underline underline-offset-4'
-            prefetch={false}
-          >
-            Home
-          </Link>
-          <Link
-            href='#'
+            href='#about'
             className='text-sm font-medium hover:underline underline-offset-4'
             prefetch={false}
           >
             About
           </Link>
           <Link
-            href='#'
+            href='#features'
             className='text-sm font-medium hover:underline underline-offset-4'
             prefetch={false}
           >
-            Services
+            Features
           </Link>
           <Link
-            href='#'
+            href='#contact'
             className='text-sm font-medium hover:underline underline-offset-4'
             prefetch={false}
           >
