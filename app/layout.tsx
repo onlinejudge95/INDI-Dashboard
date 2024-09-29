@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import { ThemeProvider } from '@/components/theme';
 
 export const metadata: Metadata = {
   title: 'INDIa',
@@ -12,11 +13,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
+    <html suppressHydrationWarning lang='en'>
       <head>
         <link rel='icon' href='icons/india-favicon-white.png' sizes='any' />
       </head>
-      <body className='antialiased'>{children}</body>
+      <body className='antialiased'>
+        <ThemeProvider
+          enableSystem
+          disableTransitionOnChange
+          attribute='class'
+          defaultTheme='system'
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

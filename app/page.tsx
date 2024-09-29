@@ -1,4 +1,4 @@
-import { NavigationMenu } from '@/components/NavigationMenu';
+import { NavigationMenu } from '@/components/navigationMenu';
 
 const Home = () => {
   return <NavigationMenu />;
