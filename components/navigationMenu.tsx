@@ -11,7 +11,7 @@ import { ThemeToggle } from '@/components/theme';
 
 const NavigationMenu = () => {
   return (
-    <header className='flex h-20 w-full shrink-0 items-center px-4 md:px-6 bg-zinc-600 text-white'>
+    <header className='flex h-20 w-full shrink-0 items-center px-4 md:px-6 bg-stone-700 dark:bg-neutral-900 text-white'>
       <Sheet>
         <SheetTrigger asChild>
           <Button size='icon' className='lg:hidden'>
