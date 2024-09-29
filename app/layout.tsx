@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
+
 import './globals.css';
+
 import { ThemeProvider } from '@/components/theme';
+import { NavigationMenu } from '@/components/navigationMenu';
 
 export const metadata: Metadata = {
   title: 'INDIa',
@@ -24,6 +27,7 @@ export default function RootLayout({
           attribute='class'
           defaultTheme='system'
         >
+          <NavigationMenu />
           {children}
         </ThemeProvider>
       </body>
