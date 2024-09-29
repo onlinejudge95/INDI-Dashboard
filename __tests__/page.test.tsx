@@ -4,11 +4,15 @@ import { render, screen } from '@testing-library/react';
 import Page from '../app/page';
 
 describe('Page', () => {
-  it('renders an image', () => {
+  it('renders navbar', () => {
     render(<Page />);
+    const navbar = document.querySelector('header');
+    expect(navbar).toBeInTheDocument();
+  });
 
-    const heading = screen.getByRole('heading', { level: 1 });
-
-    expect(heading).toBeInTheDocument();
+  it('renders hero', () => {
+    render(<Page />);
+    const hero = document.querySelector('section');
+    expect(hero).toBeInTheDocument();
   });
 });
