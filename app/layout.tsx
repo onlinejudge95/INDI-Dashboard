@@ -17,7 +17,7 @@ export default function RootLayout({
       <head>
         <link rel='icon' href='icons/india-favicon-white.png' sizes='any' />
       </head>
-      <body className='antialiased'>
+      <body className='antialiased bg-zinc-300 dark:bg-zinc-800'>
         <ThemeProvider
           enableSystem
           disableTransitionOnChange
