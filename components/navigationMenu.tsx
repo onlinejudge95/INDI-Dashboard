@@ -45,7 +45,7 @@ const NavigationMenu = () => {
       </Sheet>
       <div className='mr-4 lg:mr-8'>
         <Link href='/'>
-          <Image src={Logo} alt='Your Logo' className='h-12 w-12 ml-4' />
+          <Image src={Logo} alt='INDIa Logo' className='h-12 w-12 ml-4' />
         </Link>
       </div>
       <div className='ml-auto hidden lg:flex'>
