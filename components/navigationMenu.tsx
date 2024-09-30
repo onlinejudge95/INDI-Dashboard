@@ -20,21 +20,14 @@ const NavigationMenu = () => {
           </Button>
         </SheetTrigger>
         <SheetContent side='left'>
-          <Link href='#' className='flex items-center gap-2' prefetch={false}>
+          <Link href='/' className='flex items-center gap-2' prefetch={false}>
             <Telescope className='h-6 w-6' />
             <span className='text-lg font-semibold'>INDIa</span>
           </Link>
           <div className='grid gap-4 py-6'>
             <ThemeToggle />
             <Link
-              href='#about'
-              className='flex w-full items-center py-2 text-lg font-semibold'
-              prefetch={false}
-            >
-              About
-            </Link>
-            <Link
-              href='#features'
+              href='/features'
               className='flex w-full items-center py-2 text-lg font-semibold'
               prefetch={false}
             >
@@ -51,20 +44,15 @@ const NavigationMenu = () => {
         </SheetContent>
       </Sheet>
       <div className='mr-4 lg:mr-8'>
-        <Image src={Logo} alt='Your Logo' className='h-12 w-12 ml-4' />
+        <Link href='/'>
+          <Image src={Logo} alt='Your Logo' className='h-12 w-12 ml-4' />
+        </Link>
       </div>
       <div className='ml-auto hidden lg:flex'>
         <nav className='flex items-center gap-6'>
           <ThemeToggle />
           <Link
-            href='#about'
-            className='text-sm font-medium hover:underline underline-offset-4'
-            prefetch={false}
-          >
-            About
-          </Link>
-          <Link
-            href='#features'
+            href='/features'
             className='text-sm font-medium hover:underline underline-offset-4'
             prefetch={false}
           >
