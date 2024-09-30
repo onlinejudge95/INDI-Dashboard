@@ -4,6 +4,7 @@ import './globals.css';
 
 import { ThemeProvider } from '@/components/theme';
 import { NavigationMenu } from '@/components/navigationMenu';
+import { Footer } from '@/components/footer';
 
 export const metadata: Metadata = {
   title: 'INDIa',
@@ -29,6 +30,7 @@ export default function RootLayout({
         >
           <NavigationMenu />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

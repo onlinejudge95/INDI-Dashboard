@@ -66,9 +66,7 @@ const Community = () => {
                 >
                   <div className='grid gap-4'>
                     {icon}
-                    <h4 className='font-bold text-xl text-secondary'>
-                      {title}
-                    </h4>
+                    <h4 className='font-bold text-xl text-primary'>{title}</h4>
                     <p className='text-base opacity-75'>{description}</p>
                   </div>
                   {cta && (
