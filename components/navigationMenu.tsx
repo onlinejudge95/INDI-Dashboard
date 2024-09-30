@@ -34,11 +34,11 @@ const NavigationMenu = () => {
               Features
             </Link>
             <Link
-              href='#contact'
+              href='/community'
               className='flex w-full items-center py-2 text-lg font-semibold'
               prefetch={false}
             >
-              Contact
+              Community
             </Link>
           </div>
         </SheetContent>
@@ -59,11 +59,11 @@ const NavigationMenu = () => {
             Features
           </Link>
           <Link
-            href='#contact'
+            href='/community'
             className='text-sm font-medium hover:underline underline-offset-4'
             prefetch={false}
           >
-            Contact
+            Community
           </Link>
         </nav>
       </div>

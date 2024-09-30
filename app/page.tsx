@@ -10,7 +10,7 @@ import { Button } from '@/components/ui/button';
 
 const Hero = () => {
   return (
-    <section id='hero' className='border-b min-h-screen'>
+    <section className='border-b min-h-screen'>
       <div className='flex flex-col items-center text-center mt-8'>
         <Image
           src={Logo}

@@ -28,7 +28,7 @@ const Features = () => {
   ];
 
   return (
-    <section id='features' className='border-b min-h-screen'>
+    <section className='border-b min-h-screen'>
       <div className='not-prose'>
         <div className='flex flex-col gap-6 items-center text-center mt-20'>
           <h3 className='text-4xl'>
@@ -44,7 +44,7 @@ const Features = () => {
           <div className='mt-6 grid gap-6 md:mt-12 md:grid-cols-3'>
             {featureText.map(({ icon, title, description }, index) => (
               <div
-                className='flex flex-col gap-4 mx-10 bg-slate-200 text-secondary'
+                className='flex flex-col gap-4 mx-10 text-primary'
                 key={index}
               >
                 {icon}
