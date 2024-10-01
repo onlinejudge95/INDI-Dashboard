@@ -28,6 +28,10 @@ const handler = NextAuth({
     strategy: 'jwt',
     maxAge: 5 * 24 * 60 * 60,
   },
+  pages: {
+    signIn: '/auth',
+    error: '/auth/error',
+  },
   callbacks: {
     async signIn({ user }) {
       if (!user?.email) {

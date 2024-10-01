@@ -13,37 +13,52 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import { signIn } from 'next-auth/react';
+
+type IdentityProvider = {
+  icon: JSX.Element;
+  provider: string;
+};
 
 const SignIn: React.FC = () => {
+  const identityProviders: IdentityProvider[] = [
+    { icon: <FaDiscord className='ml-2 h-4 w-4' />, provider: 'discord' },
+    { icon: <FaGithub className='ml-2 h-4 w-4' />, provider: 'github' },
+    { icon: <FaGitlab className='ml-2 h-4 w-4' />, provider: 'gitlab' },
+    { icon: <FaGoogle className='ml-2 h-4 w-4' />, provider: 'google' },
+  ];
   return (
     <section className='border-b min-h-screen'>
       <div className='grid grid-cols-1'>
-        <div className='mt-20 mx-20 w-96 items-center'>
+        <div className='mt-20 w-80 mx-20'>
           <Card>
             <CardHeader>
               <CardTitle>
-                <h1 className='text-3xl'>Sign-In</h1>
+                <h1 className='text-3xl text-center'>Sign-In</h1>
               </CardTitle>
               <CardDescription>
-                <p>SignIn using any of the following.</p>
+                <p className='text-center'>
+                  Sign In using any of the following.
+                </p>
               </CardDescription>
             </CardHeader>
-            <CardContent className='flex-cols'>
-              <Button>
-                Sign In with <FaDiscord className='ml-2 h-4 w-4' />
-              </Button>
-              <Button>
-                Sign In with <FaGithub className='ml-2 h-4 w-4' />
-              </Button>
-              <Button>
-                Sign In with <FaGitlab className='ml-2 h-4 w-4' />
-              </Button>
-              <Button>
-                Sign In with <FaGoogle className='ml-2 h-4 w-4' />
-              </Button>
+            <CardContent>
+              <div className='flex flex-col rounded-lg items-center'>
+                {identityProviders.map(({ icon, provider }, index) => (
+                  <div className='w-50 my-2' key={index}>
+                    <Button
+                      onClick={() => {
+                        signIn(provider);
+                      }}
+                    >
+                      Sign-In with {icon}
+                    </Button>
+                  </div>
+                ))}
+              </div>
             </CardContent>
             <CardFooter>
-              <p>
+              <p className='text-center'>
                 You can check our{' '}
                 <Link className='hover:opacity-75' href='/terms-of-service'>
                   Terms of Services
