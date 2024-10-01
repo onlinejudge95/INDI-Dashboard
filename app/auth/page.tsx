@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import React from 'react';
-import { FaDiscord, FaGithub, FaGitlab, FaGoogle } from 'react-icons/fa';
+import { FaDiscord, FaGithub, FaGoogle } from 'react-icons/fa';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -24,7 +24,6 @@ const SignIn: React.FC = () => {
   const identityProviders: IdentityProvider[] = [
     { icon: <FaDiscord className='ml-2 h-4 w-4' />, provider: 'discord' },
     { icon: <FaGithub className='ml-2 h-4 w-4' />, provider: 'github' },
-    { icon: <FaGitlab className='ml-2 h-4 w-4' />, provider: 'gitlab' },
     { icon: <FaGoogle className='ml-2 h-4 w-4' />, provider: 'google' },
   ];
   return (
