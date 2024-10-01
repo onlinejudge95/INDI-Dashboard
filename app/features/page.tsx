@@ -1,6 +1,6 @@
 'use client';
 
-import { Coins } from 'lucide-react';
+import { FaCoins } from 'react-icons/fa';
 import Balancer from 'react-wrap-balancer';
 
 import FeatureText from './types';
@@ -8,19 +8,19 @@ import FeatureText from './types';
 const Features = () => {
   const featureText: FeatureText[] = [
     {
-      icon: <Coins className='h-6 w-6' />,
+      icon: <FaCoins className='h-6 w-6' />,
       title: 'Lorem Ipsum',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
     {
-      icon: <Coins className='h-6 w-6' />,
+      icon: <FaCoins className='h-6 w-6' />,
       title: 'Lorem Ipsum',
       description:
         'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     },
     {
-      icon: <Coins className='h-6 w-6' />,
+      icon: <FaCoins className='h-6 w-6' />,
       title: 'Lorem Ipsum',
       description:
         'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',

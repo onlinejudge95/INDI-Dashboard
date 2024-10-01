@@ -1,6 +1,6 @@
 'use client';
 
-import { MenuIcon, Telescope } from 'lucide-react';
+import { IoMenu, IoTelescope } from 'react-icons/io5';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -15,13 +15,13 @@ const NavigationMenu = () => {
       <Sheet>
         <SheetTrigger asChild>
           <Button size='icon' className='lg:hidden'>
-            <MenuIcon className='h-6 w-6' />
+            <IoMenu className='h-6 w-6' />
             <span className='sr-only'>Toggle Navigation Menu</span>
           </Button>
         </SheetTrigger>
         <SheetContent side='left'>
           <Link href='/' className='flex items-center gap-2' prefetch={false}>
-            <Telescope className='h-6 w-6' />
+            <IoTelescope className='h-6 w-6' />
             <span className='text-lg font-semibold'>INDIa</span>
           </Link>
           <div className='grid gap-4 py-6'>
@@ -39,6 +39,13 @@ const NavigationMenu = () => {
               prefetch={false}
             >
               Community
+            </Link>
+            <Link
+              href='/auth'
+              className='flex w-full items-center py-2 text-lg font-semibold'
+              prefetch={false}
+            >
+              Get Started
             </Link>
           </div>
         </SheetContent>
@@ -64,6 +71,13 @@ const NavigationMenu = () => {
             prefetch={false}
           >
             Community
+          </Link>
+          <Link
+            href='/auth'
+            className='text-sm font-medium hover:underline underline-offset-4'
+            prefetch={false}
+          >
+            Get Started
           </Link>
         </nav>
       </div>

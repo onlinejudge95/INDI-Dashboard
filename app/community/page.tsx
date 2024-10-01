@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowRight, Coins } from 'lucide-react';
+import { FaArrowRight, FaCoins } from 'react-icons/fa';
 import Balancer from 'react-wrap-balancer';
 
 import CommunityText from './types';
@@ -9,7 +9,7 @@ import Link from 'next/link';
 const Community = () => {
   const communityText: CommunityText[] = [
     {
-      icon: <Coins className='h-6 w-6' />,
+      icon: <FaCoins className='h-6 w-6' />,
       title: 'Lorem Ipsum',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -17,7 +17,7 @@ const Community = () => {
       cta: 'Learn More',
     },
     {
-      icon: <Coins className='h-6 w-6' />,
+      icon: <FaCoins className='h-6 w-6' />,
       title: 'Lorem Ipsum',
       description:
         'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -25,7 +25,7 @@ const Community = () => {
       cta: 'Learn More',
     },
     {
-      icon: <Coins className='h-6 w-6' />,
+      icon: <FaCoins className='h-6 w-6' />,
       title: 'Lorem Ipsum',
       description:
         'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
@@ -33,7 +33,7 @@ const Community = () => {
       cta: 'Learn More',
     },
     {
-      icon: <Coins className='h-6 w-6' />,
+      icon: <FaCoins className='h-6 w-6' />,
       title: 'Lorem Ipsum',
       description:
         'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
@@ -71,7 +71,7 @@ const Community = () => {
                   </div>
                   {cta && (
                     <div className='flex h-fit items-center text-sm font-semibold'>
-                      <p>{cta}</p> <ArrowRight className='ml-2 h-4 w-4' />
+                      <p>{cta}</p> <FaArrowRight className='ml-2 h-4 w-4' />
                     </div>
                   )}
                 </Link>

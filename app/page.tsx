@@ -1,9 +1,9 @@
 'use client';
 
 import Image from 'next/image';
-import Balancer from 'react-wrap-balancer';
 import Link from 'next/link';
-import { TelescopeIcon } from 'lucide-react';
+import Balancer from 'react-wrap-balancer';
+import { IoTelescope } from 'react-icons/io5';
 
 import Logo from '@/public/logo/india-high-resolution-logo-black-transparent.png';
 import { Button } from '@/components/ui/button';
@@ -28,8 +28,8 @@ const Hero = () => {
         </h3>
         <div className='not-prose mt-6 flex gap-2 md:mt-12'>
           <Button asChild>
-            <Link href='/authenticate'>
-              <TelescopeIcon className='mr-2' />
+            <Link href='/api/auth/signin'>
+              <IoTelescope className='mr-2' />
               Get Started
             </Link>
           </Button>
