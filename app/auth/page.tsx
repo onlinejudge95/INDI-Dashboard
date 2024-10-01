@@ -48,7 +48,7 @@ const SignIn: React.FC = () => {
                   <div className='w-50 my-2' key={index}>
                     <Button
                       onClick={() => {
-                        signIn(provider);
+                        signIn(provider, { callbackUrl: '/dashboard' });
                       }}
                     >
                       Sign-In with {icon}
