@@ -24,6 +24,22 @@ const handler = NextAuth({
     }),
   ],
   secret: process.env.NEXTAUTH_SECRET as string,
+  session: {
+    strategy: 'jwt',
+    maxAge: 5 * 24 * 60 * 60,
+  },
+  callbacks: {
+    async signIn({ user }) {
+      if (!user?.email) {
+        throw new Error('Failed to fecth profile info from google');
+      }
+
+      // Do custom user upsert logic
+      console.log('AUTHENTICATED');
+      return true;
+    },
+  },
+  debug: process.env.NODE_ENV === 'development',
 });
 
 export { handler as GET, handler as POST };

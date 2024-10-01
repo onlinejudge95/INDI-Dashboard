@@ -7,8 +7,8 @@ import { IoMenu, IoTelescope } from 'react-icons/io5';
 
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import Logo from '@/public/logo/india-high-resolution-logo-white-transparent.png';
 import { ThemeToggle } from '@/components/theme';
+import Logo from '@/public/logo/india-high-resolution-logo-white-transparent.png';
 
 const NavigationMenu: React.FC = () => {
   return (

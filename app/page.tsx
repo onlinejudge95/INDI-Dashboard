@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
         </h3>
         <div className='not-prose mt-6 flex gap-2 md:mt-12'>
           <Button asChild>
-            <Link href='/api/auth/signin'>
+            <Link href='/auth'>
               <IoTelescope className='mr-2' />
               Get Started
             </Link>
