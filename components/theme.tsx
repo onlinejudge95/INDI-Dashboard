@@ -1,16 +1,12 @@
 'use client';
 
-import * as React from 'react';
-import { ThemeProvider as NextThemesProvider, useTheme } from 'next-themes';
-import { type ThemeProviderProps } from 'next-themes/dist/types';
-import { MoonIcon, SunIcon } from 'lucide-react';
-import { Button } from './ui/button';
+import { useTheme } from 'next-themes';
+import React from 'react';
+import { FaMoon, FaSun } from 'react-icons/fa';
 
-const ThemeProvider = ({ children, ...props }: ThemeProviderProps) => {
-  return <NextThemesProvider {...props}>{children}</NextThemesProvider>;
-};
+import { Button } from '@/components/ui/button';
 
-const ThemeToggle = () => {
+const ThemeToggle: React.FC = () => {
   const { theme, setTheme } = useTheme();
 
   const handleThemeChange = () => {
@@ -19,9 +15,9 @@ const ThemeToggle = () => {
 
   return (
     <Button variant='ghost' size='icon' onClick={handleThemeChange}>
-      {theme === 'light' ? <MoonIcon /> : <SunIcon />}
+      {theme === 'light' ? <FaMoon /> : <FaSun />}
     </Button>
   );
 };
 
-export { ThemeProvider, ThemeToggle };
+export { ThemeToggle };

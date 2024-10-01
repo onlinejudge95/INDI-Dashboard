@@ -34,7 +34,7 @@ exports[`renders homepage unchanged 1`] = `
           self.__wrap_n=self.__wrap_n||(self.CSS&&CSS.supports("text-wrap","balance")?1:2);self.__wrap_b=(e,n,t)=&gt;{t=t||document.querySelector(\`[data-br="\${e}"]\`);let r=t==null?void 0:t.parentElement;if(!r)return;let o=u=&gt;t.style.maxWidth=u+"px";t.style.maxWidth="";let l=r.clientWidth,d=r.clientHeight,s=l/2-.25,a=l+.5,c;if(l){for(o(s),s=Math.max(t.scrollWidth,s);s+1&lt;a;)c=Math.round((s+a)/2),o(c),r.clientHeight===d?a=c:s=c;o(a*n+l*(1-n))}t.__wrap_o||(typeof ResizeObserver!="undefined"?(t.__wrap_o=new ResizeObserver(()=&gt;{self.__wrap_b(0,+t.dataset.brr,t)})).observe(r):process.env.NODE_ENV==="development"&&console.warn("The browser you are using does not support the ResizeObserver API. Please consider add polyfill for this API to avoid potential layout shifts or upgrade your browser. Read more: https://github.com/shuding/react-wrap-balancer#browser-support-information"))};self.__wrap_n!=1&&self.__wrap_b(":r0:",1)
         </script>
       </h1>
-      <h3
+      <p
         class="text-2xl mt-8 text-muted-foreground"
       >
         <span
@@ -47,48 +47,29 @@ exports[`renders homepage unchanged 1`] = `
         <script>
           self.__wrap_n=self.__wrap_n||(self.CSS&&CSS.supports("text-wrap","balance")?1:2);self.__wrap_b=(e,n,t)=&gt;{t=t||document.querySelector(\`[data-br="\${e}"]\`);let r=t==null?void 0:t.parentElement;if(!r)return;let o=u=&gt;t.style.maxWidth=u+"px";t.style.maxWidth="";let l=r.clientWidth,d=r.clientHeight,s=l/2-.25,a=l+.5,c;if(l){for(o(s),s=Math.max(t.scrollWidth,s);s+1&lt;a;)c=Math.round((s+a)/2),o(c),r.clientHeight===d?a=c:s=c;o(a*n+l*(1-n))}t.__wrap_o||(typeof ResizeObserver!="undefined"?(t.__wrap_o=new ResizeObserver(()=&gt;{self.__wrap_b(0,+t.dataset.brr,t)})).observe(r):process.env.NODE_ENV==="development"&&console.warn("The browser you are using does not support the ResizeObserver API. Please consider add polyfill for this API to avoid potential layout shifts or upgrade your browser. Read more: https://github.com/shuding/react-wrap-balancer#browser-support-information"))};self.__wrap_n!=1&&self.__wrap_b(":r1:",1)
         </script>
-      </h3>
+      </p>
       <div
         class="not-prose mt-6 flex gap-2 md:mt-12"
       >
         <a
           class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-4 py-2"
-          href="/authenticate"
+          href="/auth"
         >
           <svg
-            class="lucide lucide-telescope mr-2"
-            fill="none"
-            height="24"
+            class="mr-2"
+            fill="currentColor"
+            height="1em"
             stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
+            stroke-width="0"
+            viewBox="0 0 512 512"
+            width="1em"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="m10.065 12.493-6.18 1.318a.934.934 0 0 1-1.108-.702l-.537-2.15a1.07 1.07 0 0 1 .691-1.265l13.504-4.44"
+              d="M107.56 250a16 16 0 0 0-21.85-5.86L36 272.81a39.71 39.71 0 0 0-18.8 24.91 40.9 40.9 0 0 0 4.55 30.35l4.36 7.54a40 40 0 0 0 54.62 14.62l49.67-28.63a16 16 0 0 0 5.87-21.86z"
             />
             <path
-              d="m13.56 11.747 4.332-.924"
-            />
-            <path
-              d="m16 21-3.105-6.21"
-            />
-            <path
-              d="M16.485 5.94a2 2 0 0 1 1.455-2.425l1.09-.272a1 1 0 0 1 1.212.727l1.515 6.06a1 1 0 0 1-.727 1.213l-1.09.272a2 2 0 0 1-2.425-1.455z"
-            />
-            <path
-              d="m6.158 8.633 1.114 4.456"
-            />
-            <path
-              d="m8 21 3.105-6.21"
-            />
-            <circle
-              cx="12"
-              cy="13"
-              r="2"
+              d="M382.84 440.8 288.72 254a2 2 0 0 1 .79-2.63l8.3-4.79a16 16 0 0 0 5.86-21.86l-47.53-82.33a16 16 0 0 0-21.86-5.87l-86.38 49.8a39.73 39.73 0 0 0-18.65 24.28 34.82 34.82 0 0 0-1.37 9.76c.06 7.6 9.2 22.7 18.12 38.28 9.59 16.75 19.24 33.88 26.34 38.15 4.52 2.72 12.5 4.9 19.21 4.9h.84l-79.32 171.6a16 16 0 1 0 29.05 13.42l93.68-202.65a7.94 7.94 0 0 1 3.26-3.57l19.21-11.08a2 2 0 0 1 2.78.84l93.21 185a16 16 0 0 0 28.58-14.4zm107.37-325.06L444.09 36a40.08 40.08 0 0 0-54.63-14.62l-93.34 53.78a39.69 39.69 0 0 0-18.65 24.28 32.76 32.76 0 0 0-1.27 13.25c1.74 12.62 13 30.4 26.41 53.89 13.58 23.73 28.91 50.48 36.93 56.27a40.18 40.18 0 0 0 23.18 7.37 39.77 39.77 0 0 0 19.92-5.34L476 171.07a39.72 39.72 0 0 0 18.79-24.84 41 41 0 0 0-4.58-30.49z"
             />
           </svg>
           Get Started
