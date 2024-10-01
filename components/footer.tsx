@@ -29,8 +29,10 @@ const Footer: React.FC = () => {
           </p>
           <p>
             ©{' '}
-            <a href='https://github.com/onlinejudge95/INDI-Dashboard'>INDIa</a>.
-            All rights reserved. 2024-present.
+            <Link href='https://github.com/onlinejudge95/INDI-Dashboard'>
+              INDIa
+            </Link>
+            . All rights reserved. 2024-present.
           </p>
         </div>
         <div className='flex flex-col gap-2'>

@@ -34,7 +34,7 @@ exports[`renders homepage unchanged 1`] = `
           self.__wrap_n=self.__wrap_n||(self.CSS&&CSS.supports("text-wrap","balance")?1:2);self.__wrap_b=(e,n,t)=&gt;{t=t||document.querySelector(\`[data-br="\${e}"]\`);let r=t==null?void 0:t.parentElement;if(!r)return;let o=u=&gt;t.style.maxWidth=u+"px";t.style.maxWidth="";let l=r.clientWidth,d=r.clientHeight,s=l/2-.25,a=l+.5,c;if(l){for(o(s),s=Math.max(t.scrollWidth,s);s+1&lt;a;)c=Math.round((s+a)/2),o(c),r.clientHeight===d?a=c:s=c;o(a*n+l*(1-n))}t.__wrap_o||(typeof ResizeObserver!="undefined"?(t.__wrap_o=new ResizeObserver(()=&gt;{self.__wrap_b(0,+t.dataset.brr,t)})).observe(r):process.env.NODE_ENV==="development"&&console.warn("The browser you are using does not support the ResizeObserver API. Please consider add polyfill for this API to avoid potential layout shifts or upgrade your browser. Read more: https://github.com/shuding/react-wrap-balancer#browser-support-information"))};self.__wrap_n!=1&&self.__wrap_b(":r0:",1)
         </script>
       </h1>
-      <h3
+      <p
         class="text-2xl mt-8 text-muted-foreground"
       >
         <span
@@ -47,7 +47,7 @@ exports[`renders homepage unchanged 1`] = `
         <script>
           self.__wrap_n=self.__wrap_n||(self.CSS&&CSS.supports("text-wrap","balance")?1:2);self.__wrap_b=(e,n,t)=&gt;{t=t||document.querySelector(\`[data-br="\${e}"]\`);let r=t==null?void 0:t.parentElement;if(!r)return;let o=u=&gt;t.style.maxWidth=u+"px";t.style.maxWidth="";let l=r.clientWidth,d=r.clientHeight,s=l/2-.25,a=l+.5,c;if(l){for(o(s),s=Math.max(t.scrollWidth,s);s+1&lt;a;)c=Math.round((s+a)/2),o(c),r.clientHeight===d?a=c:s=c;o(a*n+l*(1-n))}t.__wrap_o||(typeof ResizeObserver!="undefined"?(t.__wrap_o=new ResizeObserver(()=&gt;{self.__wrap_b(0,+t.dataset.brr,t)})).observe(r):process.env.NODE_ENV==="development"&&console.warn("The browser you are using does not support the ResizeObserver API. Please consider add polyfill for this API to avoid potential layout shifts or upgrade your browser. Read more: https://github.com/shuding/react-wrap-balancer#browser-support-information"))};self.__wrap_n!=1&&self.__wrap_b(":r1:",1)
         </script>
-      </h3>
+      </p>
       <div
         class="not-prose mt-6 flex gap-2 md:mt-12"
       >

@@ -21,12 +21,12 @@ const Hero: React.FC = () => {
         <h1 className='text-6xl !mb-0'>
           <Balancer>Fine grained modern remote observatory control</Balancer>
         </h1>
-        <h3 className='text-2xl mt-8 text-muted-foreground'>
+        <p className='text-2xl mt-8 text-muted-foreground'>
           <Balancer>
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
             nisi ut aliquip ex ea commodo consequat.
           </Balancer>
-        </h3>
+        </p>
         <div className='not-prose mt-6 flex gap-2 md:mt-12'>
           <Button asChild>
             <Link href='/auth'>
