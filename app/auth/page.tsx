@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import React from 'react';
-import { FaDiscord, FaGithub, FaGoogle } from 'react-icons/fa';
+import { FaDiscord, FaGithub, FaGoogle, FaTwitch } from 'react-icons/fa';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -25,6 +25,7 @@ const SignIn: React.FC = () => {
     { icon: <FaDiscord className='ml-2 h-4 w-4' />, provider: 'discord' },
     { icon: <FaGithub className='ml-2 h-4 w-4' />, provider: 'github' },
     { icon: <FaGoogle className='ml-2 h-4 w-4' />, provider: 'google' },
+    { icon: <FaTwitch className='ml-2 h-4 w-4' />, provider: 'twitch' },
   ];
   return (
     <section className='border-b min-h-screen'>

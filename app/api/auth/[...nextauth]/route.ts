@@ -2,6 +2,7 @@ import NextAuth from 'next-auth';
 import DiscordProvider from 'next-auth/providers/discord';
 import GithubProvider from 'next-auth/providers/github';
 import GoogleProvider from 'next-auth/providers/google';
+import TwitchProvider from 'next-auth/providers/twitch';
 
 const handler = NextAuth({
   providers: [
@@ -16,6 +17,10 @@ const handler = NextAuth({
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID as string,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
+    }),
+    TwitchProvider({
+      clientId: process.env.TWITCH_CLIENT_ID as string,
+      clientSecret: process.env.TWITCH_CLIENT_SECRET as string,
     }),
   ],
   secret: process.env.NEXTAUTH_SECRET as string,
