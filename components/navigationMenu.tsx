@@ -1,15 +1,16 @@
 'use client';
 
-import { IoMenu, IoTelescope } from 'react-icons/io5';
 import Image from 'next/image';
 import Link from 'next/link';
+import React from 'react';
+import { IoMenu, IoTelescope } from 'react-icons/io5';
 
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import Logo from '@/public/logo/india-high-resolution-logo-white-transparent.png';
 import { ThemeToggle } from '@/components/theme';
 
-const NavigationMenu = () => {
+const NavigationMenu: React.FC = () => {
   return (
     <header className='flex h-20 w-full shrink-0 items-center px-4 md:px-6 bg-stone-700 dark:bg-neutral-900 text-white'>
       <Sheet>

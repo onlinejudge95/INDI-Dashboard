@@ -1,11 +1,16 @@
 'use client';
 
+import React from 'react';
 import { FaCoins } from 'react-icons/fa';
 import Balancer from 'react-wrap-balancer';
 
-import FeatureText from './types';
+type FeatureText = {
+  icon: JSX.Element;
+  title: string;
+  description: string;
+};
 
-const Features = () => {
+const Features: React.FC = () => {
   const featureText: FeatureText[] = [
     {
       icon: <FaCoins className='h-6 w-6' />,

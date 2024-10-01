@@ -2,11 +2,12 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import React from 'react';
 import Balancer from 'react-wrap-balancer';
 
 import Logo from '@/public/logo/india-high-resolution-logo-white-transparent.png';
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <footer className='bg-stone-700 dark:bg-neutral-900 text-white'>
       <div className='grid gap-12 items-center md:grid-cols-[1.5fr_0.5fr_0.5fr]'>

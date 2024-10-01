@@ -2,13 +2,14 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import Balancer from 'react-wrap-balancer';
+import React from 'react';
 import { IoTelescope } from 'react-icons/io5';
+import Balancer from 'react-wrap-balancer';
 
 import Logo from '@/public/logo/india-high-resolution-logo-black-transparent.png';
 import { Button } from '@/components/ui/button';
 
-const Hero = () => {
+const Hero: React.FC = () => {
   return (
     <section className='border-b min-h-screen'>
       <div className='flex flex-col items-center text-center mt-8'>

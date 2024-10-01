@@ -1,12 +1,19 @@
 'use client';
 
+import Link from 'next/link';
+import React from 'react';
 import { FaArrowRight, FaCoins } from 'react-icons/fa';
 import Balancer from 'react-wrap-balancer';
 
-import CommunityText from './types';
-import Link from 'next/link';
+type CommunityText = {
+  icon: JSX.Element;
+  title: string;
+  description: string;
+  href?: string;
+  cta?: string;
+};
 
-const Community = () => {
+const Community: React.FC = () => {
   const communityText: CommunityText[] = [
     {
       icon: <FaCoins className='h-6 w-6' />,

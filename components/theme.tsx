@@ -1,7 +1,7 @@
 'use client';
 
-import * as React from 'react';
 import { useTheme } from 'next-themes';
+import React from 'react';
 import { FaMoon, FaSun } from 'react-icons/fa';
 
 import { Button } from '@/components/ui/button';
