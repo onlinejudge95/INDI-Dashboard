@@ -1,5 +1,5 @@
 import { Footer } from '@/components/footer';
-import { NavigationMenu } from '@/components/navigationMenu';
+import { PublicNavbar } from '@/components/navbar/public';
 
 export default function CommonLayout({
   children,
@@ -8,7 +8,7 @@ export default function CommonLayout({
 }>) {
   return (
     <>
-      <NavigationMenu />
+      <PublicNavbar />
       {children}
       <Footer />
     </>

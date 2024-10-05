@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -10,13 +8,13 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { ThemeToggle } from '@/components/theme';
 import Logo from '@/public/logo/india-high-resolution-logo-white-transparent.png';
 
-type NavigationMenuItem = {
+type PublicNavbarItem = {
   href: string;
   text: string;
 };
 
-const NavigationMenu: React.FC = () => {
-  const menuItem: NavigationMenuItem[] = [
+const PublicNavbar: React.FC = () => {
+  const menuItem: PublicNavbarItem[] = [
     { href: '/features', text: 'Features' },
     { href: '/community', text: 'Community' },
     { href: '/auth', text: 'Get Started' },
@@ -75,4 +73,4 @@ const NavigationMenu: React.FC = () => {
   );
 };
 
-export { NavigationMenu };
+export { PublicNavbar };
