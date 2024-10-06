@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import React from 'react';
 import { CiSettings } from 'react-icons/ci';
@@ -9,6 +11,7 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Separator } from '@/components/ui/separator';
 import { Tooltip, TooltipTrigger } from '@/components/ui/tooltip';
+import { signOut } from 'next-auth/react';
 
 type DashboardNavbarItem = {
   icon: JSX.Element;
@@ -22,11 +25,6 @@ const DashboardNavbar: React.FC = () => {
       icon: <FaUserAstronaut className='h-5 w-5' />,
       href: '/dashboard#user',
       text: 'User',
-    },
-    {
-      icon: <FaSignOutAlt className='h-5 w-5' />,
-      href: '/api/auth/signout',
-      text: 'Sign Out',
     },
   ];
   return (
@@ -54,6 +52,24 @@ const DashboardNavbar: React.FC = () => {
               </TooltipTrigger>
             </Tooltip>
           ))}
+          <Separator />
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button
+                asChild
+                variant={'link'}
+                onClick={() => signOut({ callbackUrl: '/' })}
+              >
+                <Link
+                  href='#'
+                  className='flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8'
+                >
+                  <FaSignOutAlt className='h-5 w-5' />
+                  <span className='sr-only'>Sign Out</span>
+                </Link>
+              </Button>
+            </TooltipTrigger>
+          </Tooltip>
         </nav>
       </aside>
       <Sheet>
