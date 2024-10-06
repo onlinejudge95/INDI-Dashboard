@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -10,7 +8,18 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { ThemeToggle } from '@/components/theme';
 import Logo from '@/public/logo/india-high-resolution-logo-white-transparent.png';
 
-const NavigationMenu: React.FC = () => {
+type PublicNavbarItem = {
+  href: string;
+  text: string;
+};
+
+const PublicNavbar: React.FC = () => {
+  const menuItem: PublicNavbarItem[] = [
+    { href: '/features', text: 'Features' },
+    { href: '/community', text: 'Community' },
+    { href: '/auth', text: 'Get Started' },
+  ];
+
   return (
     <header className='flex h-20 w-full shrink-0 items-center px-4 md:px-6 bg-stone-700 dark:bg-neutral-900 text-white'>
       <Sheet>
@@ -27,27 +36,16 @@ const NavigationMenu: React.FC = () => {
           </Link>
           <div className='grid gap-4 py-6'>
             <ThemeToggle />
-            <Link
-              href='/features'
-              className='flex w-full items-center py-2 text-lg font-semibold'
-              prefetch={false}
-            >
-              Features
-            </Link>
-            <Link
-              href='/community'
-              className='flex w-full items-center py-2 text-lg font-semibold'
-              prefetch={false}
-            >
-              Community
-            </Link>
-            <Link
-              href='/auth'
-              className='flex w-full items-center py-2 text-lg font-semibold'
-              prefetch={false}
-            >
-              Get Started
-            </Link>
+            {menuItem.map(({ href, text }, index) => (
+              <Link
+                href={href}
+                key={index}
+                prefetch={false}
+                className='flex w-full items-center py-2 text-lg font-semibold'
+              >
+                {text}
+              </Link>
+            ))}
           </div>
         </SheetContent>
       </Sheet>
@@ -59,31 +57,20 @@ const NavigationMenu: React.FC = () => {
       <div className='ml-auto hidden lg:flex'>
         <nav className='flex items-center gap-6'>
           <ThemeToggle />
-          <Link
-            href='/features'
-            className='text-sm font-medium hover:underline underline-offset-4'
-            prefetch={false}
-          >
-            Features
-          </Link>
-          <Link
-            href='/community'
-            className='text-sm font-medium hover:underline underline-offset-4'
-            prefetch={false}
-          >
-            Community
-          </Link>
-          <Link
-            href='/auth'
-            className='text-sm font-medium hover:underline underline-offset-4'
-            prefetch={false}
-          >
-            Get Started
-          </Link>
+          {menuItem.map(({ href, text }, index) => (
+            <Link
+              href={href}
+              key={index}
+              prefetch={false}
+              className='flex w-full items-center py-2 text-lg font-semibold'
+            >
+              {text}
+            </Link>
+          ))}
         </nav>
       </div>
     </header>
   );
 };
 
-export { NavigationMenu };
+export { PublicNavbar };

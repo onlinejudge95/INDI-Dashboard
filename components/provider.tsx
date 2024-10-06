@@ -4,6 +4,8 @@ import { SessionProvider } from 'next-auth/react';
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
 import React from 'react';
 
+import { TooltipProvider } from '@/components/ui/tooltip';
+
 type CustomContextProps = {
   children: React.ReactNode;
 };
@@ -17,7 +19,7 @@ const CustomContextProvider: React.FC<CustomContextProps> = ({ children }) => {
         attribute='class'
         defaultTheme='system'
       >
-        {children}
+        <TooltipProvider>{children}</TooltipProvider>
       </NextThemesProvider>
     </SessionProvider>
   );
