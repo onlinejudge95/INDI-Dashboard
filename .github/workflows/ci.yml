@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: '22.9.0'
           cache: 'yarn'
-          cache-dependency-apth: 'yarn.lock'
+          cache-dependency-path: 'yarn.lock'
       - name: Install dependencies
         run: yarn install --with dev
       - name: Linting
@@ -41,7 +41,7 @@ jobs:
         with:
           node-version: '22.9.0'
           cache: 'yarn'
-          cache-dependency-apth: 'yarn.lock'
+          cache-dependency-path: 'yarn.lock'
       - name: Install dependencies
         run: yarn install --with dev
       - name: Build
@@ -62,7 +62,7 @@ jobs:
         with:
           node-version: '22.9.0'
           cache: 'yarn'
-          cache-dependency-apth: 'yarn.lock'
+          cache-dependency-path: 'yarn.lock'
       - name: Install dependencies
         run: yarn install --with dev
       - name: Run unit tests
